@@ -1317,6 +1317,8 @@
 
         localStorage.setItem("productos", JSON.stringify(productos));
         console.log("Productos precargados");
+            pintarBarraCategorias();
+    pintar(productos);
 
         if (loader) {
           loader.style.opacity = "0";
@@ -1378,13 +1380,6 @@ precargarProductos();
 
       const grid = document.getElementById("productsGrid");
       const searchInput = document.getElementById("searchInput");
-      // Pintar categorías al cargarfiltr
-      pintarBarraCategorias();
-
-      // Pintar productos iniciales
-      pintar(productos);
-
-      // Buscador (ya actualizado arriba)
       searchInput.addEventListener("input", () => { /* código de arriba */ });
 
       actualizarIconoCarrito();
@@ -1957,5 +1952,6 @@ precargarProductos();
   </script>
 
 </body>
+
 
 </html>
